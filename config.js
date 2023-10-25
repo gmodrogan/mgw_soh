@@ -1,7 +1,10 @@
-export const clientId = '7fdc0cd8-36d5-4e4d-830f-c0897f6b6458' //prod
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.indexUri = exports.redirectUri = exports.clientId = void 0;
+exports.clientId = '7fdc0cd8-36d5-4e4d-830f-c0897f6b6458'; //prod
 //export const clientId = '48dc94d9-0b92-4dc2-9de7-bf2b889a97dc' // dev
-export const redirectUri = 'https://gmodrogan.github.io/mgw_soh/after-auth'
-export const indexUri = 'https://gmodrogan.github.io/mgw_soh/index'
-
+exports.redirectUri = 'https://gmodrogan.github.io/mgw_soh/after-auth';
+exports.indexUri = 'https://gmodrogan.github.io/mgw_soh/index';
 // export const redirectUri = 'http://localhost:63342/mgw_soh/after-auth.html'
 // export const indexUri = 'http://localhost:63342/mgw_soh/index.html'
+//# sourceMappingURL=config.js.map
