@@ -7,7 +7,7 @@ var queryString = window.location.search;
 var fhirUrl = window.getQueryParam('iss', queryString);
 var launchId = window.getQueryParam('launch', queryString);
 
-Cookie.set('fhir_url', fhirUrl, { secure: true, "max-age": 3600 });
+Cookie.set('fhir_url', fhirUrl, { secure: true });
 
 function getWellKnown(callback, errorCallback) {
     var xhr = new XMLHttpRequest();
