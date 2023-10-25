@@ -1,7 +1,7 @@
 var queryString = window.location.search;
-var urlParams = new URLSearchParams(queryString);
-var code = urlParams.get('code');
-var state = urlParams.get('state');
+
+var fhirUrl = window.getQueryParam('code', queryString);
+var state = window.getQueryParam('state', queryString);
 
 var tokenEndpoint = Cookie.get("token_endpoint");
 var fhirUrl = Cookie.get("fhir_url");

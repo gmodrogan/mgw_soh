@@ -2,14 +2,10 @@ var Cookie = window.Cookie;
 var clientId = window.myConfig.clientId;
 var redirectUri = window.myConfig.redirectUri;
 
-var queryString = window.location.search;
-var urlParams = new URLSearchParams(queryString);
-
-var fhirUrl = urlParams.get('iss');
+var fhirUrl = window.getQueryParam('iss', queryString);
+var launchId = window.getQueryParam('launch', queryString);
 
 Cookie.set('fhir_url', fhirUrl, { secure: true, "max-age": 3600 });
-
-var launchId = urlParams.get('launch');
 
 function getWellKnown(callback, errorCallback) {
     var xhr = new XMLHttpRequest();
