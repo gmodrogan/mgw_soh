@@ -31,7 +31,6 @@ function authorize(data) {
     Cookie.set('token_endpoint', token_endpoint, { secure: true, "max-age": 3600 });
 
     debugger;
-
     var auth_location = authEndpoint + '?' +
         "response_type=code&" +
         "client_id=" + clientId + "&" +
