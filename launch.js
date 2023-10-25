@@ -2,6 +2,8 @@ var Cookie = window.Cookie;
 var clientId = window.myConfig.clientId;
 var redirectUri = window.myConfig.redirectUri;
 
+var queryString = window.location.search;
+
 var fhirUrl = window.getQueryParam('iss', queryString);
 var launchId = window.getQueryParam('launch', queryString);
 
