@@ -49,7 +49,6 @@ function authorize(data) {
 getWellKnown(function (data) {
     authorize(data);
 }, function (err) {
-    // Uncomment if you want to pause execution for debugging
-    // debugger;
+    debugger;
     console.log(err.message);
 });

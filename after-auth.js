@@ -38,8 +38,7 @@ function getAccessToken(callback, errorCallback) {
 
 Cookie.rem('token_data');
 getAccessToken(function (data) {
-    // Uncomment if you want to pause execution for debugging
-    // debugger;
+    debugger;
 
     if (data.error) {
         console.log('error fetching token: ' + (data.error_uri || ''));
@@ -50,8 +49,7 @@ getAccessToken(function (data) {
     location.assign(indexUri);
 
 }, function (err) {
-    // Uncomment if you want to pause execution for debugging
-    // debugger;
+    debugger;
 
     console.log(err.message);
 });

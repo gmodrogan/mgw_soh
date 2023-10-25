@@ -1,5 +1,3 @@
-// Assuming Cookie was made global in the previous step
-
 var Cookie = window.Cookie;
 
 var fhirUrl = Cookie.get("fhir_url");
@@ -37,7 +35,6 @@ getPatient(function (data) {
     document.getElementById('mgw-data-url').textContent = fhirUrl + '/Patient/' + token_data.patient;
     document.getElementById('mgw-data-content').textContent = JSON.stringify(data);
 }, function (err) {
-    // Uncomment if you want to pause execution for debugging
-    // debugger;
+    debugger;
     console.log(err.message);
 });
