@@ -12,8 +12,6 @@ var Cookie = {
     o = o || {};
     o = {
       path: "/",
-      expires: o.expires,
-      "max-age": o["max-age"],
       secure: o.secure
     };
 
