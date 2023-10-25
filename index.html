@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
+  <script>
+    var exports = {};
+  </script>
+  <body>
+    <h1>MGW SmartOnFhir</h1>
 
-<body>
+    <div id="mgw-data">
+      <p id="mgw-data-url">Retrieving data...</p>
+      <textarea id="mgw-data-content" rows="10" cols="100"></textarea>
+    </div>
 
-<h1>MGW SmartOnFhir</h1>
-
-<div id='mgw-data'>
-    <p id="mgw-data-url">Retrieving data...</p>
-    <textarea id="mgw-data-content" rows="10" cols="100"></textarea>
-</div>
-
-<script type="module" src="index.js"></script>
-</body>
+    <script type="module" src="index.js"></script>
+  </body>
 </html>
