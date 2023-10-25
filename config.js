@@ -7,4 +7,3 @@ exports.redirectUri = 'https://gmodrogan.github.io/mgw_soh/after-auth';
 exports.indexUri = 'https://gmodrogan.github.io/mgw_soh/index';
 // export const redirectUri = 'http://localhost:63342/mgw_soh/after-auth.html'
 // export const indexUri = 'http://localhost:63342/mgw_soh/index.html'
-//# sourceMappingURL=config.js.map

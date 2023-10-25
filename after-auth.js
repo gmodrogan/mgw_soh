@@ -86,4 +86,3 @@ getAccessToken().then(function (data) {
     debugger;
     console.log('error fetching access token');
 });
-//# sourceMappingURL=after-auth.js.map

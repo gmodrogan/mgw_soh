@@ -84,4 +84,3 @@ getWellKnown().then(function (data) {
     debugger;
     console.log('error fetching well-known');
 });
-//# sourceMappingURL=launch.js.map

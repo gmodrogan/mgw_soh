@@ -19,7 +19,9 @@ exports.Cookie = {
     },
     set: function (e, n, o) {
         if (o === void 0) { o = {}; }
-        o = __assign({ path: "/" }, o), o.expires instanceof Date && (o.expires = o.expires.toUTCString());
+        (o = __assign({ path: "/" }, o)),
+            o.expires instanceof Date &&
+                (o.expires = o.expires.toUTCString());
         var c = unescape(encodeURIComponent(e)) + "=" + unescape(encodeURIComponent(n));
         for (var t in o) {
             c += "; " + t;
@@ -30,7 +32,7 @@ exports.Cookie = {
     },
     rem: function (e) {
         exports.Cookie.set(e, "", { "max-age": -1 });
-    }
+    },
 };
 function getWwwFormUrlEncodedData(data) {
     var formBody = [];
@@ -42,4 +44,3 @@ function getWwwFormUrlEncodedData(data) {
     return formBody.join("&");
 }
 exports.getWwwFormUrlEncodedData = getWwwFormUrlEncodedData;
-//# sourceMappingURL=helpers.js.map
