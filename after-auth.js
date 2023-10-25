@@ -1,3 +1,5 @@
+var Cookie = window.Cookie;
+
 var queryString = window.location.search;
 
 var code = window.getQueryParam('code', queryString);
