@@ -1,6 +1,6 @@
 var queryString = window.location.search;
 
-var fhirUrl = window.getQueryParam('code', queryString);
+var code = window.getQueryParam('code', queryString);
 var state = window.getQueryParam('state', queryString);
 
 var tokenEndpoint = Cookie.get("token_endpoint");
