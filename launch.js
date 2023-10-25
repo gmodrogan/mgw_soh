@@ -28,7 +28,7 @@ function getWellKnown(callback, errorCallback) {
 function authorize(data) {
     var authEndpoint = data.authorization_endpoint;
     var token_endpoint = data.token_endpoint;
-    Cookie.set('token_endpoint', token_endpoint, { secure: true, "max-age": 3600 });
+    Cookie.set('token_endpoint', token_endpoint, { secure: true });
 
     debugger;
     var auth_location = authEndpoint + '?' +

@@ -37,7 +37,7 @@ var Cookie = {
   },
 
   rem: function (e) {
-    Cookie.set(e, "", { "max-age": -1 });
+    Cookie.set(e, "", {});
   }
 };
 
