@@ -15,8 +15,8 @@ const mgw_eat_active = Cookie.get('mgw_eat_active')
 
 const launchId = urlParams.get('launch')
 
-async function getWellKnown() {
-    let response = await fetch(fhirUrl + '/.well-known/smart-configuration', {
+async function getMetadata() {
+    let response = await fetch(fhirUrl + '/metadata', {
         headers: {
             Accept: 'application/json'
         }
@@ -27,8 +27,9 @@ async function getWellKnown() {
 
 function authorize(data) {
     //.replace
-    let authEndpoint = data.authorization_endpoint;
-    let token_endpoint = mgw_eat_active == "1" ? token_endpoint_eat : data.token_endpoint;
+    let extension = data.rest[0].security.extension[0].extension;
+    let authEndpoint = extension.find((item) => item.url == "authorize" ).valueUri
+    let token_endpoint = mgw_eat_active == "1" ? token_endpoint_eat : extension.find((item) => item.url == "token" ).valueUri;
     // let token_endpoint = data.token_endpoint;
     // let token_endpoint = 
     Cookie.set('token_endpoint', token_endpoint, {secure: true, "max-age": 3600})
@@ -47,7 +48,7 @@ function authorize(data) {
 }
 
 
-getWellKnown().then((data) => {
+getMetadata().then((data) => {
     authorize(data)
 }).catch((err) => {
     debugger
